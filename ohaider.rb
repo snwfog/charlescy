@@ -1,18 +1,24 @@
 require 'slim'
 require 'eldr'
 require 'eldr-rendering'
+require 'eldr-assets'
+require_relative 'helpers/rendering'
 
-class Ohaider < Eldr::App
-  Configuration = Struct.new *%i(views_dir engine)
-  include Eldr::Rendering
-  attr_accessor :configuration
+module Ohaider
+  class Charlescy < Eldr::App
+    include Eldr::Rendering
+    include Eldr::Assets
+    include Ohaider::Helpers
 
-  def initialize
-    @configuration = Configuration.new File.join(__dir__, 'views'), 'slim'
+    set :assets_path, File.join(__dir__, 'assets')
+    set :views_dir, File.join(__dir__, 'views')
+    set :asset_stamp, false
+
+    get('/')                  { render 'index.slim' }
+    get('/css/normalize.css') { render_assets 'normalize.css' }
+    get('/css/style.css')     { render_assets 'style.css' }
+    get('/css/style.css.map') { render_assets 'style.css.map' }
+
+    get('/assets/images/:image_name')   { render_assets ''}
   end
-
-  get '/' do
-    render 'index.slim'
-  end
-
 end

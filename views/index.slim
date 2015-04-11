@@ -2,7 +2,88 @@ doctype html
 html
   head
     title O hai der! - Charles Yang
-
+    == css 'normalize'
+    == css 'style'
+    /
+    /     .oooooo.   oooo                           oooo
+    /    d8P'  `Y8b  `888                           `888
+    /   888           888 .oo.    .oooo.   oooo d8b  888   .ooooo.   .oooo.o
+    /   888           888P"Y88b  `P  )88b  `888""8P  888  d88' `88b d88(  "8
+    /   888           888   888   .oP"888   888      888  888ooo888 `"Y88b.
+    /   `88b    ooo   888   888  d8(  888   888      888  888    .o o.  )88b
+    /    `Y8bood8P'  o888o o888o `Y888""8o d888b    o888o `Y8bod8P' 8""888P'
+    /
+    / O hai der
+    /
+    javascript:
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0]; a.async=1; a.src=g; m.parentNode.insertBefore(a, m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-61763903-1', 'auto');
+      ga('send', 'pageview');
   body
-    h1 O hai der
 
+    div#container
+
+      h1 O hai der!
+      p I'm Charles Yang
+      nav
+        ul
+          li
+            a title='imho'
+              == render_emoji :speech_balloon
+              |   imho
+          li
+            a title='hireme?'
+              == render_emoji :punch
+              |   hire me?
+          li
+            a title='octocat'
+              == render_emoji :octocat
+              |   octocat
+          li
+            a title='ig'
+              == render_emoji :sunrise_over_mountains
+              |   ig
+          li
+            a title='mailto'
+              == render_emoji :mailbox_closed
+              |   mailto
+
+      p I currently work as a software developer at Oracle
+
+      p I grew up in Montreal; and now I live in Toronto
+
+      p I enjoy
+      ul
+        li
+          == render_emoji :snowboarder
+          |   snowboarding
+        li
+          == render_emoji :books
+          |   reading
+        li
+          == render_emoji :bike
+          |   cycling
+        li
+          == render_emoji :guitar
+          |   jamming on my acoustic guitar
+
+      p My favorite band is OneRepublic
+
+      p My life role model is my grand-father
+
+      p I'm fluent in
+      ul
+        li
+          == render_emoji :us
+          |   us
+
+        li
+          == render_emoji :fr
+          |   fr
+
+        li
+          == render_emoji :cn
+          |   cn
