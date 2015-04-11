@@ -13,4 +13,6 @@ gem 'gemoji'
 
 # Monitoring / Instrumenting
 gem 'statsd-instrument'
-gem 'newrelic_rpm'
+# gem 'newrelic_rpm'
+
+# Development / Debugging
