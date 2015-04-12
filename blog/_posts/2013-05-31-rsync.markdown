@@ -1,0 +1,32 @@
+---
+layout: post
+title: "rsync"
+date: 2013-05-31 23:48
+comments: true
+categories: 
+---
+From [here](https://www.youtube.com/redirect?q=http%3A%2F%2Fwww.thegeekstuff.com%2F2010%2F09%2Frsync-command-examples%2F&session_token=FNCA-cELuy_4e0voaFwuA23vj-18MTM3MDE0NDA3NEAxMzcwMDU3Njc0)
+```
+rsync OPTIONS SOURCE DESTINATION
+SOURCE/DESTINATION can be local or remote
+rsync sample.txt local/sample.txt
+rsync sample.txt yjiang@testhost:~/sample.txt
+rsync -e "ssh -i fuzicast-home.pem" sample.txt hadoop@testhost:~/sample.txt #use this for password-less access
+rsync --progress # shows progress of data transfer
+# you can time the following commands to check their execution time
+rsync -zv sample.txt yjiang@testhost:~/sample.txt # -z for compressed transfer, -v for verbose
+rsync -zvr local yjiang@testhost:~/ # -r for recurively copying
+rsync -avz local yjiang@testhost:~/ # -a does many things, recursion and preserves timestamp, permission and links
+# alternatively, you can use -l (preserve links), -p (preserve permission), -t (timestamp), -o (ownership), -g (group)
+rsync -dv local yjiang@testhost:~/ # only synchronize directory tree
+rsync -avz --delete local yjiang@testhost:~/ # in addition to synchronization, it will also delete any unmatched files in remote host
+rsync -avz --existing local yjiang@testhost:~/ # synchronize but do not add new files to DESTINATION
+rsync -avzi local yjiang@testhost:~/ # tells you which side has differences
+f+++++++ local/badfile # f means differences in file, + means its new
+f.st.... local/sample.txt # s means size differences, t means timestamp changed
+rsync -avz --exclude 'ex*' local yjiang@testhost:~/ # exclude certain files
+rsync -avz --max-size 200k local yjiang@testhost:~/ # set a max size for files to transfer
+rsync -avzW local yjiang@testhost:~/ # force whole file transfer
+rsync -avzn local yjiang@testhost:~/ # -n will do a dry run with no changes taken effect, it only tells you what would be changed
+rsync -avzu local yjiang@testhost:~/ # update remote files only if local is newer than remote
+```

@@ -1,5 +1,6 @@
 require 'pathname'
 
+JEKYLL_BUILD_PATH = File.expand_path('../blog', __FILE__)
 
 desc 'Copy emoji to the Rails `public/images/emoji` directory'
 task :emoji do
@@ -19,9 +20,14 @@ task restart: %i(bi) do
   end
 
   puts "Starting unicorn process..."
+  # FIXME: Allow bundle exec to be run on unicorn ie. use sh
   if system('unicorn -c /home/unicorn/unicorn.conf -D')
     puts 'Successfully restarted unicorn...'
   end
+end
+
+task :octopress do
+  sh "jekyll build #{JEKYLL_BUILD_PATH}/_config.yml"
 end
 
 task :bi do

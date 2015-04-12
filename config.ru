@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 
 require 'sprockets'
+require 'rack/jekyll'
 
 require_relative 'config/statsd'
 require_relative 'ohaider'
@@ -16,6 +17,10 @@ map '/assets' do
   environment.append_path 'assets'
   environment.logger = logger
   run environment
+end
+
+map '/blog' do
+  run Rack::Jekyll.new(destination: ::File.expand_path('../blog/_site', __FILE__))
 end
 
 map '/' do
