@@ -1,4 +1,5 @@
 require 'slim'
+require 'statsd-instrument'
 require 'eldr'
 require 'eldr-rendering'
 require 'eldr-assets'
@@ -15,10 +16,22 @@ module Ohaider
     set :asset_stamp, false
 
     get('/')                  { render 'index.slim' }
-    get('/css/normalize.css') { render_assets 'normalize.css' }
-    get('/css/style.css')     { render_assets 'style.css' }
-    get('/css/style.css.map') { render_assets 'style.css.map' }
+    get('/css/normalize.css') { render_assets '/css/normalize.css' }
+    get('/css/style.css')     { render_assets '/css/style.css' }
+    get('/css/style.css.map') { render_assets '/css/style.css.map' }
+    get('/images/emoji/**')   { |req| render_assets req['eldr.request'].path }
+  end
 
-    get('/assets/images/:image_name')   { render_assets ''}
+  class ErrorMiddleware
+    def initialize(app)
+      @app = app
+    end
+
+    def call(env)
+      @app.call(env)
+    rescue Exception
+      StatsD.increment("exceptions.global")
+      [400, {'Content-Type' => 'text/html'}, ['<p>Something when wrong.</p>']]
+    end
   end
 end

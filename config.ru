@@ -6,7 +6,7 @@ require 'sprockets'
 require_relative 'config/statsd'
 require_relative 'ohaider'
 
-ENV['RACK_ENV'] = 'production'
+# ENV['RACK_ENV'] = 'production'
 
 logger = Logger.new('log/development.log')
 logger.debug ENV.inspect
@@ -19,5 +19,6 @@ map '/assets' do
 end
 
 map '/' do
+  # use Ohaider::ErrorMiddleware
   run Ohaider::Charlescy
 end
