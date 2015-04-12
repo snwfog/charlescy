@@ -1,3 +1,5 @@
+require 'pathname'
+
 desc "Copy emoji to the Rails `public/images/emoji` directory"
 task :emoji do
   require 'emoji'

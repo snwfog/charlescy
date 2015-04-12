@@ -15,11 +15,7 @@ module Ohaider
     set :views_dir, File.join(__dir__, 'views')
     set :asset_stamp, false
 
-    get('/')                  { render 'index.slim' }
-    get('/css/normalize.css') { render_assets '/css/normalize.css' }
-    get('/css/style.css')     { render_assets '/css/style.css' }
-    get('/css/style.css.map') { render_assets '/css/style.css.map' }
-    get('/images/emoji/**')   { |req| render_assets req['eldr.request'].path }
+    get('/') { render 'index.slim' }
   end
 
   class ErrorMiddleware
