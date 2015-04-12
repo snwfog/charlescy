@@ -26,8 +26,10 @@ task restart: %i(bi) do
   end
 end
 
-task :octopress do
-  sh "jekyll build #{JEKYLL_BUILD_PATH}/_config.yml"
+task :blog do
+  chdir JEKYLL_BUILD_PATH
+  puts "Generating the static Octopress site..."
+  sh "jekyll build"
 end
 
 task :bi do
