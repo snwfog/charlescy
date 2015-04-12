@@ -10,7 +10,7 @@ gem 'sprockets'
 # Fun
 gem 'gemoji'
 
-# Deployment / Infra / Setup
+# Server / Deployment / Infra / Setup
 gem 'capistrano'
 
 # Monitoring / Instrumenting

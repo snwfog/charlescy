@@ -13,18 +13,18 @@ end
 
 task restart: %i(bi) do
   pid = `cat /home/unicorn/pids/unicorn.pid`.rstrip
-  return if pid.empty?
+  unless pid.empty?
+    puts "Killing unicorn process #{pid}..."
+    sh "kill -QUIT #{pid}"
+  end
 
-  puts "Killing unicorn process #{pid}..."
-  sh "kill -QUIT #{pid}"
-
-  puts 'Rebooting unicorn...'
-  sh 'unicorn -c /home/unicorn/unicorn.conf -D' do
+  puts "Starting unicorn process..."
+  if system('unicorn -c /home/unicorn/unicorn.conf -D')
     puts 'Successfully restarted unicorn...'
   end
 end
 
 task :bi do
-  sh 'bundle install'
+  sh 'bundle check || bundle install'
 end
 
