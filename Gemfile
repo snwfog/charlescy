@@ -7,7 +7,6 @@ gem 'eldr-rendering'
 gem 'eldr-assets'
 gem 'sprockets'
 
-
 # Fun
 gem 'gemoji'
 
