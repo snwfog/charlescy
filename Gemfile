@@ -10,6 +10,9 @@ gem 'sprockets'
 # Fun
 gem 'gemoji'
 
+# Deployment / Infra / Setup
+gem 'capistrano'
+
 # Monitoring / Instrumenting
 gem 'statsd-instrument'
 # gem 'newrelic_rpm'
