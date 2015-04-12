@@ -11,7 +11,8 @@ module Ohaider
     include Eldr::Assets
     include Ohaider::Helpers
 
-    set :assets_path, File.join(__dir__, 'assets')
+    # set :assets_path, File.join(__dir__, 'assets')
+    set :css_assets_folder, '/assets/css'
     set :views_dir, File.join(__dir__, 'views')
     set :asset_stamp, false
 
