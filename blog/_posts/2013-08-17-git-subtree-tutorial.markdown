@@ -74,13 +74,11 @@ Now if we run `git branch`
 
 We see that this branch exists. But where does it exists? To understand better this new tree, we need to take a look at the graphical `git`.
 
-<!-- {% img ../cdn/blog/img/split_no_branch.png %} -->
 
 In this screenshot, we see that the new branch `redmine_plugin_01`, is completely detached from the main project’s branch. I don’t know what they are called exactly, but I refer them as **hanging**, or **detached** branches, because they are not attached to the main history.
 
 There are a few more options that we can apply when we do the split command. The `--annotate` option will prepend a new string to every commit message in the new commits. Because these commits will essentially have the exact same commit message, but different in the SHA.
 
-<!-- {% img ../cdn/blog/img/split_with_annotate.png %} -->
 
 Now we can manipulate this new branch to get it ready to push to its new repository. Assume for the moment that this repository is completely empty.
 
@@ -88,7 +86,6 @@ The squash command comes with `subtree add merge pull push`, but not with `split
 
 First checkout this new branch, `git checkout redmine_plugin_01`, then do `git rebase -i --root`. Rewrite your history like a regular interactive rebase.
 
-<!-- {% img ../cdn/blog/img/interactive_rebased.png %} -->
 
 The `--rejoin` command allow you to merge the new splitted branch immediately back into your main project. I have not figure out the reason why I would want to do that, but here is how.
 
@@ -97,8 +94,6 @@ git subtree split --prefix=plugin/redmine_plugin_01 \
 --branch=redmine_plugin_01 --annotate='(plugin 01 split)' \
 --rejoin master
 ```
-
-<!-- {% img ../cdn/blog/img/split_rejoin.png %} -->
 
 ### Updating submodules repository
 
