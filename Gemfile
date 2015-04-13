@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+# TODO:
+# - Add deployment via Capistrano
+# - Fix Jekyll images and create cdn for images + helpers
+# - Link anchors from the mainsite to the appropriate subsites
+# - Rebuild the css for the blog
+
 gem 'rack'
 gem 'slim'
 gem 'eldr'
@@ -16,7 +22,9 @@ gem 'octopress', '~> 3.0.0.rc'
 gem 'gemoji'
 
 # Server / Deployment / Infra / Setup
+gem 'unicorn'
 gem 'capistrano'
+gem 'rsync'
 
 # Monitoring / Instrumenting
 gem 'statsd-instrument'

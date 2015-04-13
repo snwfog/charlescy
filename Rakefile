@@ -1,4 +1,5 @@
 require 'pathname'
+require 'rsync'
 
 JEKYLL_BUILD_PATH = File.expand_path('../blog', __FILE__)
 
