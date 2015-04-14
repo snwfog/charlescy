@@ -3,22 +3,19 @@ body {
   font-size: 11pt;
   color: #333; }
 
-div#container {
+div.container {
   margin: 20px; }
 
 nav {
   margin-bottom: 40px; }
-
-nav a {
-  text-decoration: none; }
-
-nav a:hover {
-  font-weight: bold;
-  text-decoration: underline;
-  cursor: pointer;
-  color: #000; }
-
-nav a:visited {
-  color: #333; }
+  nav a {
+    text-decoration: none; }
+    nav a :hover {
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+      color: #000; }
+    nav a :visited {
+      color: #333; }
 
 /*# sourceMappingURL=style.css.map */
