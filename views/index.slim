@@ -2,7 +2,12 @@ doctype html
 html
   head
     title O hai der! - Charles Yang
+    meta chareset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='viewport' content='width=device-width, initial-scale=1'
+    meta name='description' content='O hai der! Im a software developer raised in Montreal, live in Toronto and work for Oracle'
     == css 'normalize'
+    == css 'skeleton'
     == css 'style'
     /
     /     .oooooo.   oooo                           oooo
@@ -24,7 +29,7 @@ html
       ga('send', 'pageview');
   body
 
-    div#container
+    div.container
       h1 O hai der!
       p I'm Charles Yang
       nav
@@ -34,7 +39,7 @@ html
               == render_emoji :speech_balloon
               |   imho
           li
-            a title='hireme?'
+            a title='hire me?'
               == render_emoji :punch
               |   hire me
           li
