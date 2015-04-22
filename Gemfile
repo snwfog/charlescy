@@ -7,6 +7,7 @@ source 'https://rubygems.org'
 
 gem 'rack'
 gem 'slim'
+gem 'tilt'
 gem 'eldr'
 gem 'eldr-rendering'
 gem 'eldr-assets'

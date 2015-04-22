@@ -18,4 +18,9 @@ nav {
     nav a :visited {
       color: #333; }
 
+.icon {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px; }
+
 /*# sourceMappingURL=style.css.map */
