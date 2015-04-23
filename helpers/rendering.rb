@@ -11,12 +11,12 @@ module Ohaider
       raise "Cannot find emoji #{emoji_name}" if emoji.nil?
       # StatsD.increment("rendering.assets.emoji.#{emoji.name}") # Increment
       image_path = "/assets/images/emoji/#{emoji.image_filename}"
-      "<img alt='#{emoji.name}' src='#{image_path}' />"
+      "<img alt='#{emoji.name}' src='#{image_path}' class='icon-emoji' />"
     end
 
     def css file
       options = { rel: 'stylesheet', type: 'text/css' }
-      self.tag(:link, { href: "/assets/#{file}.css" }.update(options))
+      self.tag(:link, { href: "/assets/css/#{file}.css" }.update(options))
     end
 
     private
