@@ -20,6 +20,7 @@ div.container {
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
+  font-family: $sans-serif-font;
 
   &,
   &:visited {
@@ -179,13 +180,15 @@ div.container {
 }
 
 .post-meta {
-  font-size: $small-font-size;
+  font-size: 15px;
+  font-family: $cursive-font;
   color: $grey-color;
 }
 
 .post-link {
   display: block;
-  font-size: $base-font-size * 1.5;
+  font-family: $mono-font;
+  font-size: $base-font-size / 1.2;
 }
 
 /**
@@ -196,17 +199,19 @@ div.container {
 }
 
 .post-title {
-  font-size: 42px;
+  font-size: 24px;
   letter-spacing: -1px;
   line-height: 1;
+  font-family: $cursive-font;
 
   @include media-query($on-laptop) {
-    font-size: 36px;
+    font-size: 24px;
   }
 }
 
 .post-content {
   margin-bottom: $spacing-unit;
+  font-family: $cursive-font;
 
   h2 {
     font-size: 32px;
