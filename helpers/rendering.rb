@@ -16,18 +16,7 @@ module Ohaider
 
     def css file
       options = { rel: 'stylesheet', type: 'text/css' }
-      self.tag(:link, { href: "/assets/css/#{file}.css" }.update(options))
-    end
-
-    private
-    def get_mime(asset_path)
-      type = case File.extname(asset_path)
-             when /png|jpe?g/
-               'image'
-             else
-               'text'
-             end
-      "#{type}/#{File.extname(asset_path)[1..-1]}"
+      self.tag(:link, { href: "/css/#{file}.css" }.update(options))
     end
   end
 end

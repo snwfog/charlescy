@@ -1,7 +1,8 @@
 body {
   font-family: 'Courier', sans-serif;
   font-size: 11pt;
-  color: #333; }
+  color: #333;
+  background-color: #fdfdfd; }
 
 div.container {
   margin: 20px; }

@@ -14,7 +14,7 @@ JEKYLL_BUILD_PATH = File.expand_path('../blog', __FILE__)
 EXCLUDED_PATH     = %w(.* vendor tmp emoji log)
 
 VIEW_SLIM_TEMPLATES = Rake::FileList['views/*.slim']
-ASSET_SCSS_FILES = Rake::FileList['assets/**/*.scss']
+ASSET_SCSS_FILES = Rake::FileList['blog/css/*.scss'].exclude(/main/)
 
 # Remote task
 set :domain, "root@104.236.93.109:#{REMOTE_DIR}"
