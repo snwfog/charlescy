@@ -173,7 +173,6 @@ div.container {
 
 .post-list {
   margin-left: 0;
-  list-style: none;
 
   > li {
     margin-bottom: $spacing-unit;
@@ -187,7 +186,6 @@ div.container {
 }
 
 .post-link {
-  display: block;
   font-family: $mono-font;
   font-size: $base-font-size / 1.2;
 }
