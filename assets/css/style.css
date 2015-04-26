@@ -6,6 +6,19 @@ body {
 div.container {
   margin: 20px; }
 
+a {
+  color: #333; }
+  a:visited {
+    color: #333; }
+  a:active {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #333; }
+  a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #000; }
+
 nav {
   margin-bottom: 40px; }
   nav a {
@@ -22,5 +35,3 @@ nav {
   vertical-align: middle;
   width: 20px;
   height: 20px; }
-
-/*# sourceMappingURL=style.css.map */

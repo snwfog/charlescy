@@ -14,18 +14,19 @@ JEKYLL_BUILD_PATH = File.expand_path('../blog', __FILE__)
 EXCLUDED_PATH     = %w(.* vendor tmp emoji log)
 
 VIEW_SLIM_TEMPLATES = Rake::FileList['views/*.slim']
+ASSET_SCSS_FILES = Rake::FileList['assets/**/*.scss']
 
 # Remote task
 set :domain, "root@104.236.93.109:#{REMOTE_DIR}"
 set :target_dir, APP_PATH
 
 desc 'Deploy'
-task deploy: %W(bi create_log local:emoji local:blog local:compile local:sync) do
+task deploy: %W(bi create_log local:emoji local:blog local:compile local:css local:sync) do
 end
 
 desc 'Setup the app remotely'
 remote_task :remote_setup do
-  run '/usr/local/rvm/gems/ruby-2.1.3/bin/bundle exec rake remote:setup'
+  run 'bundle exec rake remote:setup'
 end
 
 desc 'Checking for bundle and running bundle install if needed'
@@ -91,6 +92,12 @@ namespace :local do
     end
   end
 
+  task css: ASSET_SCSS_FILES.ext('.css')
+  rule '.css' => '.scss' do |t|
+    raise 'Cannot find the scss preprocessor'.red if `which scss`.empty?
+    file_path = "#{APP_PATH}/#{t.source.pathmap('%X')}"
+    sh "scss --sourcemap=none #{file_path}.scss #{file_path}.css"
+  end
 end
 
 namespace :remote do

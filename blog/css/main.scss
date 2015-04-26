@@ -6,7 +6,7 @@
 // Our variables
 $cursive-font: 'Palatino', sans-serif;
 $sans-serif-font: 'Avenir New', 'Helvetica Neue', sans-serif;
-$mono-font: 'Cousine', 'Courier', sans-serif;
+$mono-font: 'Courier', sans-serif;
 
 $base-font-size:   20px;
 $small-font-size:  $base-font-size * 0.875;
@@ -14,9 +14,9 @@ $base-line-height: 1.5;
 
 $spacing-unit:     10px;
 
-$text-color:       #111;
+$text-color:       #333;
+$brand-color:      #333;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);

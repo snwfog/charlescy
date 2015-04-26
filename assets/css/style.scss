@@ -2,11 +2,35 @@ body {
   font-family: 'Courier', sans-serif;
   font-size: 11pt;
   color: #333;
+  background-color: #fdfdfd;
 }
 
 div.container {
   margin: 20px;
 }
+
+a {
+  color: #333;
+
+  &:visited {
+    color: #333;
+  }
+
+  &:active {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #333;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #000;
+  }
+}
+
+
+
 
 nav {
   margin-bottom: 40px;
