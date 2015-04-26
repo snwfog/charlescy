@@ -124,4 +124,3 @@ namespace :remote do
   task setup: %i(bi create_log restart) do
   end
 end
-
