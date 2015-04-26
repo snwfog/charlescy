@@ -14,7 +14,7 @@ module Ohaider
       "<img alt='#{emoji.name}' src='#{image_path}' class='icon-emoji' />"
     end
 
-    def css file
+    def css(file)
       options = { rel: 'stylesheet', type: 'text/css' }
       self.tag(:link, { href: "/css/#{file}.css" }.update(options))
     end

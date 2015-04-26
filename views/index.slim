@@ -7,6 +7,7 @@ html
     meta name='viewport' content='width=device-width, initial-scale=1'
     meta name='description' content='O hai der! Im a software developer raised in Montreal, live in Toronto and work for Oracle'
     == css 'normalize'
+    == css 'main'
     == css 'style'
     /
     /     .oooooo.   oooo                           oooo
@@ -28,27 +29,29 @@ html
       ga('send', 'pageview');
   body
 
+    header.site-header
+      div.wrapper
+        a.site-title href='charlescy.com' O hai der!
+
     div.container
-      h1 O hai der!
       p I'm Charles Yang
-      nav
-        ul
-          li
-            a title='imho' href='/blog'
-              == render_emoji :speech_balloon
-              |   imho
-          li
-            a title='hire me?' href='/assets/docs/resume.pdf'
-              == render_emoji :punch
-              |   hire me
-          li
-            a title='octocat' href='https://github.com/snwfog'
-              == render_emoji :octocat
-              |   octocat
-          li
-            a title='ig' href='https://instagram.com/snwfog/'
-              == render_emoji :sunrise_over_mountains
-              |   ig
+      ul
+        li
+          a title='imho' href='/blog'
+            == render_emoji :speech_balloon
+            |   imho
+        li
+          a title='hire me?' href='/assets/docs/resume.pdf'
+            == render_emoji :punch
+            |   hire me
+        li
+          a title='octocat' href='https://github.com/snwfog'
+            == render_emoji :octocat
+            |   octocat
+        li
+          a title='ig' href='https://instagram.com/snwfog/'
+            == render_emoji :sunrise_over_mountains
+            |   ig
 
       p I currently work as a software developer at Oracle
 

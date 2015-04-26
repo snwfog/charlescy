@@ -46,7 +46,7 @@ end
 namespace :local do
   task :sync do
     exclude_list = EXCLUDED_PATH.inject('') { |sum, path| sum << %Q( --exclude '#{path}') }
-    sh "rsync --delete -IravzP #{APP_PATH} #{REMOTE_HOST}:#{Pathname.new(REMOTE_DIR).parent} #{exclude_list}"
+    sh "rsync --delete --quiet -IravzP #{APP_PATH} #{REMOTE_HOST}:#{Pathname.new(REMOTE_DIR).parent} #{exclude_list}"
   end
 
   # desc 'Compile local tasks before syncing with remote'
