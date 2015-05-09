@@ -1,0 +1,8 @@
+blog/_site
+assets/images/emoji
+.bundle
+Gemfile.lock
+tmp
+vendor
+.sass-cache
+index.html
