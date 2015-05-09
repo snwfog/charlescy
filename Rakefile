@@ -3,6 +3,7 @@ require 'tilt'
 require 'slim'
 require 'colorize'
 require 'rake/remote_task'
+require 'yaml'
 
 require_relative 'helpers/rendering'
 include Ohaider::Helpers
@@ -129,5 +130,13 @@ namespace :remote do
   end
 
   task setup: %i(bi create_log restart) do
+  end
+end
+
+namespace :blog do
+  task :local, [:environment] do |t, args|
+    puts args
+    # yaml = YAML.load_file("#{JEKYLL_BUILD_PATH}/_config.yml")
+    # yaml['baseurl']
   end
 end
