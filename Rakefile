@@ -41,7 +41,7 @@ end
 
 desc 'Create development log if does not exist'
 task :create_log do
-  mkdir "#{APP_PATH}/log" unless Dir.exists?("#{APP_PATH}/log")
+  mkdir_p "#{APP_PATH}/log" unless Dir.exists?("#{APP_PATH}/log")
   unless File.exists?("#{APP_PATH}/log/development.log")
     touch "#{APP_PATH}/log/development.log"
   end
@@ -64,18 +64,18 @@ namespace :local do
     rm_rf target if Dir.exists?(target)
 
     target_parent = Pathname.new(target).parent
-    mkdir target and sh "cp -Rp #{Emoji.images_path}/emoji #{target_parent}"
+    mkdir_p target and sh "cp -Rp #{Emoji.images_path}/emoji #{target_parent}"
   end
 
   desc 'Generate Jekyll static blog'
-  task :blog do
+  task blog: [:css] do
     chdir JEKYLL_BUILD_PATH
     puts 'Generating the static Octopress site...'
     sh 'bundle exec jekyll build >> /dev/null'
     # Change dir back.. this was causing rake to fail
     # if anything gets run after this task
     chdir APP_PATH
-    puts 'You need to run the compile task...'.red
+    # puts 'You need to run the compile task...'.red
   end
 
   task compile: VIEW_SLIM_TEMPLATES.ext('.html')
@@ -96,7 +96,8 @@ namespace :local do
       sh "tidy5 -indent -quiet -output #{file_path}.html #{file_path}.html.tmp"
       mv "#{file_path}.html", "#{APP_PATH}/#{file_path.pathmap('%n')}.html"
       # INFO: redundant a bit, can move from tmp directly into its proper location...
-      mv "#{APP_PATH}/#{file_path.pathmap('%n')}.html", "#{JEKYLL_BUILD_PATH}/_site/#{file_path.pathmap('%n')}.html"
+      # WARN: This is not necessary, it will overwrite jekyll index page
+      # mv "#{APP_PATH}/#{file_path.pathmap('%n')}.html", "#{JEKYLL_BUILD_PATH}/_site/#{file_path.pathmap('%n')}.html"
     ensure
       puts 'Cleaning up the temporary generated view folder'
       rm_r dir_path
@@ -138,7 +139,7 @@ end
 
 namespace :blog do
   task preview: %i(local:blog local:compile) do
-    Rake::Task['blog:change_local'].invoke('dev')
+    # Rake::Task['blog:change_local'].invoke('dev')
     sh "cd #{JEKYLL_BUILD_PATH}; jekyll serve --skip-initial-build"
   end
 
@@ -150,17 +151,17 @@ namespace :blog do
   # end
 
   task :change_local, [:environment] do |t, args|
-    environment = args[:environment] || 'development'
-    yaml = YAML.load_file("#{JEKYLL_BUILD_PATH}/_config.yml")
-    case environment
-    when /dev/
-      yaml['baseurl'] = '' # Set to base path
-    else
-      yaml['baseurl'] = '/blog'
-    end
-
-    File.open("#{JEKYLL_BUILD_PATH}/_config.yml", 'w') do |f|
-      f.puts yaml.to_yaml
-    end
+    # environment = args[:environment] || 'development'
+    # yaml = YAML.load_file("#{JEKYLL_BUILD_PATH}/_config.yml")
+    # case environment
+    # when /dev/
+    #   yaml['baseurl'] = '' # Set to base path
+    # else
+    #   yaml['baseurl'] = '/blog'
+    # end
+    #
+    # File.open("#{JEKYLL_BUILD_PATH}/_config.yml", 'w') do |f|
+    #   f.puts yaml.to_yaml
+    # end
   end
 end
