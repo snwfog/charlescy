@@ -7,6 +7,8 @@ require 'rake/remote_task'
 require_relative 'helpers/rendering'
 include Ohaider::Helpers
 
+Rake.application.options.trace_rules = true
+
 APP_PATH           = File.dirname(__FILE__)
 REMOTE_DIR        = '/home/charlescy'
 REMOTE_HOST       = 'charlescy'
@@ -19,6 +21,8 @@ ASSET_SCSS_FILES = Rake::FileList['blog/css/*.scss'].exclude(/main/)
 # Remote task
 set :domain, "root@104.236.93.109:#{REMOTE_DIR}"
 set :target_dir, APP_PATH
+
+task default: :deploy
 
 desc 'Deploy'
 task deploy: %W(bi create_log local:emoji local:blog local:compile local:css local:sync) do
@@ -67,6 +71,9 @@ namespace :local do
     chdir JEKYLL_BUILD_PATH
     puts 'Generating the static Octopress site...'
     sh 'bundle exec jekyll build >> /dev/null'
+    # Change dir back.. this was causing rake to fail
+    # if anything gets run after this task
+    chdir APP_PATH
     puts 'You need to run the compile task...'.red
   end
 
