@@ -79,12 +79,13 @@ namespace :local do
   end
 
   task compile: VIEW_SLIM_TEMPLATES.ext('.html')
+  # WARN: THIS SHIT WORKS ONLY WHEN ITS INDEX.HTML
   rule '.html' => '.slim' do |t|
     raise 'Cannot compile, tidy5 does not exists' if `which tidy5`.empty?
     dir_path  = "#{APP_PATH}/tmp/#{t.source.pathmap('%d')}"
     file_path = "#{dir_path}/#{t.source.pathmap('%n')}"
     begin
-      mkdir dir_path unless Dir.exists?(dir_path)
+      mkdir_p dir_path unless Dir.exists?(dir_path)
       template = Tilt.new(t.source)
       # Create a temporary file to write the compiled html into
       touch "#{file_path}.html.tmp"
@@ -93,10 +94,12 @@ namespace :local do
         f.puts template.render(self)
       end
       sh "tidy5 -indent -quiet -output #{file_path}.html #{file_path}.html.tmp"
-      FileUtils.mv "#{file_path}.html", "#{APP_PATH}/index.html"
+      mv "#{file_path}.html", "#{APP_PATH}/#{file_path.pathmap('%n')}.html"
+      # INFO: redundant a bit, can move from tmp directly into its proper location...
+      mv "#{APP_PATH}/#{file_path.pathmap('%n')}.html", "#{JEKYLL_BUILD_PATH}/_site/#{file_path.pathmap('%n')}.html"
     ensure
       puts 'Cleaning up the temporary generated view folder'
-      FileUtils.rm_r dir_path
+      rm_r dir_path
     end
   end
 
@@ -134,9 +137,30 @@ namespace :remote do
 end
 
 namespace :blog do
-  task :local, [:environment] do |t, args|
-    puts args
-    # yaml = YAML.load_file("#{JEKYLL_BUILD_PATH}/_config.yml")
-    # yaml['baseurl']
+  task preview: %i(local:blog local:compile) do
+    Rake::Task['blog:change_local'].invoke('dev')
+    sh "cd #{JEKYLL_BUILD_PATH}; jekyll serve --skip-initial-build"
+  end
+
+  # May this will looks prettier
+  # task :say_hello do
+  #   name = ARGV.last
+  #   puts "Hello, #{name}."
+  #   task name.to_sym do ; end
+  # end
+
+  task :change_local, [:environment] do |t, args|
+    environment = args[:environment] || 'development'
+    yaml = YAML.load_file("#{JEKYLL_BUILD_PATH}/_config.yml")
+    case environment
+    when /dev/
+      yaml['baseurl'] = '' # Set to base path
+    else
+      yaml['baseurl'] = '/blog'
+    end
+
+    File.open("#{JEKYLL_BUILD_PATH}/_config.yml", 'w') do |f|
+      f.puts yaml.to_yaml
+    end
   end
 end
