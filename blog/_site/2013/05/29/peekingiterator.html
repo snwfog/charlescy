@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PeekingIterator</title>
+  <meta name="description" content="I had an interview with Google Montreal this year in February. It was an amazing experience for me, but what stroke me the most was how humble their employee...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://charlescy.com//2013/05/29/peekingiterator.html">
+  <link rel="alternate" type="application/rss+xml" title="O hai der!" href="http://charlescy.com//feed.xml" />
+</head>
+
+  <body>
+    <header class="site-header">
+    <div class="wrapper">
+        <a class="site-title" href="//">O hai der! - imho</a>
+    </div>
+</header>
+
+    <div class="container">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">PeekingIterator</h1>
+    <p class="post-meta">May 29, 2013</p>
+  </header>
+  <article class="post-content">
+    <p>I had an interview with Google Montreal this year in February. It was an amazing experience for me, but what stroke me the most was how humble their employees were. I studied/reviewed very late the night before, because I was expecting difficult questions. I arrived overly nervous for my interview. To my delight, the interviewers were extremely, extremely delicate and polite. I had interviewed with two persons. Although I remember clearly both questions, the first one is the reason of this post. The interviewed asked me the following question, “Are you familiar with the notion of iterators?” To which I answered yes. Then she asked me, “Could you please write me a peeking iterator?” At this moment, my brain froze. I was thinking about everything and anything. But really what the interviewer wanted, was a simple <strong>class</strong> of iterator, which has a method <code>peel()</code> that would not <code>pop</code> the element. As a short recap of the usage of iterator in Java, here is how it is explained in Absolute Java. With an iterator, you need to call <code>hasNext()</code>, to check if there is a next element, and then, it is when you have called <code>hasNext()</code> that you are allowed to call <code>next()</code>, which would return this next element. In this scenario, this next element return by <code>next()</code> is consumed. And in order to call <code>next()</code> again, you <strong>must</strong> call <code>hasNext()</code> before. Otherwise it would not work. 
+<!--more-->
+The reason why I struggle with the question was that first, I was extremely nervous, and I was thinking about algorithm, and data structures, but what the interviewer wanted was just a class implementation. When she saw me that I was keep probing her for clues, then she decided to pick up a marker, and write me out the constructor of the class <code>public PeekingIterator()</code>. Then she even told me that I already have as instance variable a proper <code>Iterator</code> instance.</p>
+
+<p>Sure I know to constructor an iterator, that you must implement the <code>Iterable</code> interface, and its merely three methods (<code>hasNext()</code>, <code>next()</code>, <code>remove()</code>) and that in this case, I had to, in addition, implement the <code>peek()</code> method as well. But keep in mind that at this point, I was not sure about the correct behaviour of the iterator as I have explained above.</p>
+
+<p>As the interview continues, I start to regain some of my mind, and started to write a crude, and ugly piece of code that had 4 (!) mistakes (which were pointed out by the interviewer). She even went through the code and debugged it with me. I was terribly ashamed. The reason is, the implementation was extremely easy, and had I been sitting relaxely in front of my computer, I would be able to get that in less than 5 minutes. But I was extremely nervous, and my mind was thinking overly complex, as in “this is google after all, the answer cannot be so simple”. But I was terribly wrong.</p>
+
+<p>Today, at work, I need a set structure in Java for my routine implementation of a project. I was looking through Guava, a Java based helper libraries by Google. And then I saw <a href="https://code.google.com/p/guava-libraries/wiki/CollectionHelpersExplained#PeekingIterator">this</a>. The <code>PeekingIterator</code>. This brought me back the experience that I had the interview with Google. And I secretly wish that I could go back in time, and not only I could have wrote a flawless <code>PeekingIterator</code> class, but I can also tell her that I’ve used it many times in my project that  had Guava libraries as an important dependency.</p>
+
+  </article>
+</div>
+
+    </div>
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/snwfog">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">snwfog</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

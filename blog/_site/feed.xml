@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>O hai der!</title>
+    <description>O hai der! Im a software developer raised in Montreal, Quebec. Now I live in Toronto and work for Oracle.
+</description>
+    <link>http://charlescy.com//</link>
+    <atom:link href="http://charlescy.com//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 09 May 2015 00:50:10 -0400</pubDate>
+    <lastBuildDate>Sat, 09 May 2015 00:50:10 -0400</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Update for a while</title>
+        <description>&lt;p&gt;Haven’t been updating the blog for a while. I guess this update is a well deserving one.&lt;/p&gt;
+
+&lt;p&gt;First, I finally graduated with a bachelor of Software Engineering from Concordia University in Montreal. People sometime ask why I choose to go to Concordia University whereas I could have go back to McGill; well there are two reasons. In my opinion, Concordia had a much bigger focus on hands-on experience, and encourages students to participate in internships and coops. The coops and the industrial experience program at Concordia are example of such emphasis. Whereas at McGill, I do not remember to have such a program, except the honor programs in every faculty. Second of all, I move relatively close to Concordia during my last year at McGill, then choosing Concordia was a no-brainer, considered that I did not want to walk myself all the way across campus and to Trottier building in the cold Montreal winter. I greatly enjoyed my time at Concordia, much more than I did back at McGill. I am extremely happy about been graduated, for one, it’s about damn time; for two, I am extremely grateful that I am doing something I love and that I am passionate about. I love to talk about my job, and to talk about what I do currently in my career. I code at work, I code after work, and I go to sleep thinking about how to resolve problems better; not every job on earth is this motivating; and to me, coding is definitely one of them.&lt;/p&gt;
+
+&lt;p&gt;That brings me to talk about what I do after work. I am currently working in parallel on two projects. The first one is a Node.js + Phaser.io + HTML5 + multiplayer game that me and my friend we are developing weekly. I coined the name Trill, as in &lt;a href=&quot;http://en.wikipedia.org/wiki/Trill_(music)&quot;&gt;playing the piano&lt;/a&gt;. The idea of the game is simple, tap your keyboard as fast as possible to measure your clicks per minute in a tug-of-war style against your friend(s). I think the action of tapping on the keyboard looks a lot from playing a trill on a piano. We also sometime call it “the &lt;em&gt;stupid&lt;/em&gt; game”, just cause we want to have fun building it and refering it when we talk about it. We are keeping it private for now until we are able to run some alpha test amongst friends.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cdn.charlescy.com/blog/img/trill.gif&quot; alt=&quot;trill&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The second project is a personal project, but its idea comes from my current work. I am porting my work application from Java to Rails. Our work application front end is a SPA using Angular.js that is API driven, so it will be easy to test my backend with the SPA.&lt;/p&gt;
+
+&lt;p&gt;I do believe that the look of my blog and my website is getting old, I have the intention of revamping my current blog theme with a minimalistic flat design, and upgrade to the latest Octopress. It’s a smaller project, but one that I am definitely planning to complete by the end of summer. I am looking for something simpler.&lt;/p&gt;
+
+&lt;p&gt;Work wise, I intend to complete my current internship at CloudOps. CloudOps is a Montreal based startup company located in the charming Griffin Town. I love the company; its atmosphere, and its people are attractive. At the end of my internship, I will be moving to Toronto to join Oracle, and I am excited. Moving to Toronto in mid-September will leave me with a month of free time where I can catch up on my C# skill, and I have also planned a solo-hiking trip as well. I plan to hike from Montreal to Vancouver, and then once I reach Vancouver (if I ever reach there), I will probably buy a flight ticket from Vancouver to China. I will be keeping my itinerary up to date mostly on Instagram when I start the journey around mid-August. Sur ce, a-la prochaine!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Jul 2014 16:19:05 -0400</pubDate>
+        <link>http://charlescy.com//2014/07/12/update-for-a-while.html</link>
+        <guid isPermaLink="true">http://charlescy.com//2014/07/12/update-for-a-while.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>New Apple health app icons looks strangely familiar...</title>
+        <description>&lt;p&gt;Two years ago I worked as a developer/ui/ux designer for a closed source Android app during my summer as a research assistant. The app in question is called “Vital Sign” and would help doctors and nurses to monitor patient vitals with the aid of a portal device. I based my design mostly on Window flat retro design at the time. Today, I was reading through my daily Apple news and saw that Apple released their own version of health app. And strangely, they are using a few icon designs that are very similar to mine. See it for yourself, the three in questions are &lt;em&gt;vitals&lt;/em&gt;, &lt;em&gt;blood pressure&lt;/em&gt;, and &lt;em&gt;oxygen&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;That leaves me with only one question in mind, can I ask Apple for royalties on the icon design?&lt;/p&gt;
+</description>
+        <pubDate>Mon, 17 Mar 2014 21:14:23 -0400</pubDate>
+        <link>http://charlescy.com//design,/ux,/icons,/troll/2014/03/17/new-apple-health-app-icons-looks-familiar.html</link>
+        <guid isPermaLink="true">http://charlescy.com//design,/ux,/icons,/troll/2014/03/17/new-apple-health-app-icons-looks-familiar.html</guid>
+        
+        
+        <category>design,</category>
+        
+        <category>ux,</category>
+        
+        <category>icons,</category>
+        
+        <category>troll</category>
+        
+      </item>
+    
+      <item>
+        <title>Maverick as a free upgrade</title>
+        <description>&lt;p&gt;Seems like Apple had the same feeling regarding my little rant about $20 for small OS updates (such in the case of Lion and Mountain Lion), so today they have announced OS Mavericks as a free upgrade for everyone. And apparently, you could update to Maverick for free whether you are still on Leopard, or Lion.&lt;/p&gt;
+
+&lt;p&gt;Nice move Apple.&lt;/p&gt;
+
+&lt;p&gt;I will probably have a more complete thought about today’s event in a later post if I have got time later.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 Oct 2013 18:13:00 -0400</pubDate>
+        <link>http://charlescy.com//apple,/macos/2013/10/22/maverick-as-a-free-upgrade.html</link>
+        <guid isPermaLink="true">http://charlescy.com//apple,/macos/2013/10/22/maverick-as-a-free-upgrade.html</guid>
+        
+        
+        <category>apple,</category>
+        
+        <category>macos</category>
+        
+      </item>
+    
+      <item>
+        <title>Start/Stop screensaver and wake/sleep display via Command Line (Mac OS X)</title>
+        <description>&lt;p&gt;I have a Mac Mini installed as a multimedia server in my room, attached to a small display that was hanging around, and I wish to put the display to sleep or start my beautiful screen saver via a quick ssh command since I’ve decided to not to attach a keyboard nor a mouse to the server.&lt;/p&gt;
+
+&lt;p&gt;To start the screensaver,&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+alias startss=&#39;open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app&#39;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To stop the screensaver,&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+alias stopss=&#39;killall -1 ScreenSaverEngine&#39;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To wake the display,&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+alias wakedisplay=&#39;TIME=&quot;$(date -v +6S &#39;+%m/%d/%Y %H:%M:%S&#39;)&quot;; sudo pmset schedule wake $TIME&#39;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To sleep the display,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Download &lt;a href=&quot;https://www.macupdate.com/app/mac/26234/sleep-display&quot;&gt;Sleep Display&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Copy the binary file from the content to &lt;code&gt;/usr/local/bin&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Reference link:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;http://onethingwell.org/post/3504021412/pmset&lt;/li&gt;
+  &lt;li&gt;http://apple.stackexchange.com/questions/53802/waking-display-from-terminal-general-waking&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Tue, 01 Oct 2013 21:21:00 -0400</pubDate>
+        <link>http://charlescy.com//command/commandline/macosx/ssh/2013/10/01/start-slash-stop-screensaver-and-wake-slash-sleep-display-via-command-line-mac-os-x.html</link>
+        <guid isPermaLink="true">http://charlescy.com//command/commandline/macosx/ssh/2013/10/01/start-slash-stop-screensaver-and-wake-slash-sleep-display-via-command-line-mac-os-x.html</guid>
+        
+        
+        <category>command</category>
+        
+        <category>commandline</category>
+        
+        <category>macosx</category>
+        
+        <category>ssh</category>
+        
+      </item>
+    
+      <item>
+        <title>A little reminder on heroku + assets pipeline</title>
+        <description>&lt;p&gt;I was trying to deploy a demo Rails app on Heroku today, and ran into problems with assets for not showing correctly. Taking a quick look at &lt;code&gt;heroku logs&lt;/code&gt;, shows that the path for the assets with the fingerprinting is unreachable. The solution to this problem, without running a local &lt;code&gt;be rake assets:precompile&lt;/code&gt;, is to modify the following line(s) in the &lt;code&gt;production.rb&lt;/code&gt; file&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+config.assets.initialize_on_precompile = false ( &amp;lt; 4.0 )
+config.assets.compile = true
+&lt;/code&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Sep 2013 00:09:00 -0400</pubDate>
+        <link>http://charlescy.com//rails/heroku/cloud/2013/09/01/a-little-reminder-on-heroku-plus-assets-pipeline.html</link>
+        <guid isPermaLink="true">http://charlescy.com//rails/heroku/cloud/2013/09/01/a-little-reminder-on-heroku-plus-assets-pipeline.html</guid>
+        
+        
+        <category>rails</category>
+        
+        <category>heroku</category>
+        
+        <category>cloud</category>
+        
+      </item>
+    
+      <item>
+        <title>Dear Feedly</title>
+        <description>&lt;p&gt;When Google Reader announced its retirement, I quickly sought after a free, and a viable alternative. Feedly, you seemed to be a good fit. You have a clean, and almost Google Reader like interface. You also run great within my Google Chrome browser; saving me the memory of spawning a new application. You lacked of some important features, one of them obviously is searching. But overall, I enjoy using you as my main daily RSS reader, despite your flaws.&lt;/p&gt;
+
+&lt;p&gt;But Feedly, let me tell you something that upset me is as an user: charging for a “pro” account. You did not mention that you where going to charge for “pro” only features when everyone was looking for a Google Reader alternative. Because frankly Feedly, I thought you will forever threat all of your users the same way just like Google Reader did. Honestly, I think an RSS reader should have a search function by default. This is why I choose Google Reader the first place, because its easy to use, and its &lt;strong&gt;free&lt;/strong&gt;, free as no payment for a &lt;em&gt;pro&lt;/em&gt; account.&lt;/p&gt;
+
+&lt;p&gt;A daily Feedly user,&lt;/p&gt;
+
+&lt;p&gt;Charles&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 26 Aug 2013 17:02:00 -0400</pubDate>
+        <link>http://charlescy.com//rant/feedly/rss/2013/08/26/dear-feedly.html</link>
+        <guid isPermaLink="true">http://charlescy.com//rant/feedly/rss/2013/08/26/dear-feedly.html</guid>
+        
+        
+        <category>rant</category>
+        
+        <category>feedly</category>
+        
+        <category>rss</category>
+        
+      </item>
+    
+      <item>
+        <title>Pry command cheatsheet</title>
+        <description>&lt;p&gt;I recently watched Rails Conf 2013 talk on Pry (the awesome alternative Ruby REPL) by Conrad Irwin, one of Pry’s current maintainer. I thought it would be great to have a short summary of all the tricks and tips that he mentioned.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+ls &amp;lt;Object&amp;gt; --  Show all of the available methods that can be called by an object
+_           --  Last output
+? &amp;lt;Object&amp;gt;  --  Shows more information (doc) about an object, or method
+cat &amp;lt;File&amp;gt;  --  Display the content of a file
+_file_      --  Represent the last file Pry touched
+wtf?        --  Print the stack trace, same as _ex_.backtrace
+$           --  Show source, shortcut for show-source
+edit &amp;lt;Method&amp;gt; -- Open file in $EDITOR, change file are auto reloaded
+&amp;lt;ctrl+r&amp;gt;    --  Search history
+_out_       --  Array of all outputs values, also _in_
+cd &amp;lt;var&amp;gt;    --  Step into an object, change the value of self
+cd ..       --  Take out of a level
+binding.pry --  Breakpoint
+edit --ex   --  Edit the file where the last exception was thrown
+.&amp;lt;Shell&amp;gt;    --  Runs the &amp;lt;Shell&amp;gt; command
+whereami    --  Print the context where the debugger is stopped
+;           --  Would mute the return output by Ruby
+play -l     --  Execute the line in the current debugging context
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the &lt;a href=&quot;https://www.youtube.com/watch?v=jDXsEzOHb2M&quot;&gt;link&lt;/a&gt; to the full presentation.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 Aug 2013 00:57:00 -0400</pubDate>
+        <link>http://charlescy.com//ruby/pry/debugger/debugging/2013/08/26/pry-command-cheatsheet.html</link>
+        <guid isPermaLink="true">http://charlescy.com//ruby/pry/debugger/debugging/2013/08/26/pry-command-cheatsheet.html</guid>
+        
+        
+        <category>ruby</category>
+        
+        <category>pry</category>
+        
+        <category>debugger</category>
+        
+        <category>debugging</category>
+        
+      </item>
+    
+      <item>
+        <title>Lost all data on my website :(</title>
+        <description>&lt;p&gt;Today I have learned from the hard way to always keep a data backup of your server. I was cleaning a miscellaneous folder that was named &lt;code&gt;~&lt;/code&gt; in order to upload my latest &lt;code&gt;git subtree&lt;/code&gt; post. Without even thinking twice, I typed in &lt;code&gt;rm -rf ~&lt;/code&gt; and wipe completely my home folder.&lt;/p&gt;
+
+&lt;p&gt;On a bright side however, I owe my website a good cleanup, so I will take this opportunity to build new content in the up coming few days toward the end of my internship.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 20 Aug 2013 22:58:00 -0400</pubDate>
+        <link>http://charlescy.com//website/server/2013/08/20/lost-all-data-on-my-website.html</link>
+        <guid isPermaLink="true">http://charlescy.com//website/server/2013/08/20/lost-all-data-on-my-website.html</guid>
+        
+        
+        <category>website</category>
+        
+        <category>server</category>
+        
+      </item>
+    
+      <item>
+        <title>git subtree tutorial</title>
+        <description>&lt;p&gt;I recently had to write Redmine plugins at work. Redmine is a CMS web application built using the Ruby on Rails framework. I have a local development directory of Redmine. However, I do not want to version control everything in the Redmine folder, because I am only going to make changes in my plugins. I wanted the ability to export my plugins independently and be able to version track it with &lt;code&gt;git&lt;/code&gt;, to have a separated commit logs and history and be able to extract the history into a standalone repository to push to Github. I wanted this flexibility at anytime during my development so that I can push my daily commits upstream and work on them later at home or elsewhere if needed.&lt;/p&gt;
+
+&lt;p&gt;I looked into &lt;code&gt;git submodule&lt;/code&gt;, and I did not quite feel comfortable with the idea of keeping extra file to keep track of the submodules. The idea of running multiple commands just to pull from all the plugins’ remote did not catch me either.&lt;/p&gt;
+
+&lt;p&gt;After looking for solution on the Internet, I decided to use &lt;code&gt;git subtree&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git subtree&lt;/code&gt; can construct &lt;em&gt;synthetic&lt;/em&gt; branches from existing commits in my working directory. You don’t need to keep track of a submodule file, and you don’t need to run multiple &lt;code&gt;git&lt;/code&gt; commands to push and pull from all of the existing remotes. &lt;code&gt;git subtree&lt;/code&gt; works on only one history; the main project history. From this single history, &lt;code&gt;git subtree&lt;/code&gt; can construct a new branches from commits that directly affect the target submodule directory. For instance, lets say my parent repository looked like this, as in my case it would be the Redmine project:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+./redmine
+├── app
+│   ├── ...
+├── config
+│   ├── ...
+├── db
+├── plugins
+│   ├── redmine_plugin_01
+│   └── redmine_plugin_02
+├── public
+│   ├── ...
+├── script
+└── test
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I spared a few regular Rails directories. The plugins are located under the &lt;strong&gt;plugins&lt;/strong&gt; directory.&lt;/p&gt;
+
+&lt;h3 id=&quot;extracting-local-history&quot;&gt;Extracting local history&lt;/h3&gt;
+&lt;p&gt;I will be using a submodule and subdirectory interchangeably, because a submodule is by default under its own subdirectory. So when I refer to a submodule, then I am also implicitly referring to the submodule’s directory. For a detail manual of &lt;code&gt;git subtree&lt;/code&gt; you can consult it &lt;a href=&quot;https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To extract history of a submodule in the parent project, we can use the &lt;code&gt;split&lt;/code&gt; command. A split command will take all the existing commits in your log, and construct a series of new commits (with new SHAs). These new commits will only be those who contain modification to your submodules. To split all commits made to &lt;code&gt;redmine_plugin_01&lt;/code&gt;, run the command&lt;/p&gt;
+
+&lt;p&gt;```
+git subtree split –prefix=plugins/redmine_plugin_01&lt;/p&gt;
+
+&lt;p&gt;…
+-n 39/      45 (38)
+-n 40/      45 (39)
+-n 41/      45 (40)
+-n 42/      45 (41)
+-n 43/      45 (42)
+-n 44/      45 (43)
+-n 45/      45 (44)
+b43265bbf0d7da20648ddc4e7ad30c96d978c0d4
+```&lt;/p&gt;
+
+&lt;p&gt;You will notice that &lt;code&gt;git&lt;/code&gt; will spit out bunch of info, but you will not notice any new commits. This is because there are nothing that refers to these commits (like a link list without a reference to a head). So to obtain a reference to these commits, use the &lt;code&gt;--branch, -b&lt;/code&gt; option.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+...
+-n 42/      45 (41)
+-n 43/      45 (42)
+-n 44/      45 (43)
+-n 45/      45 (44)
+Created branch ‘redmine_plugin_01’
+b43265bbf0d7da20648ddc4e7ad30c96d978c0d4
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you see that &lt;code&gt;subtree&lt;/code&gt; after splitting, will also create a new branch for us to reference to these new commits. In the &lt;code&gt;subtree&lt;/code&gt; documentation, this tree is referred as a new &lt;strong&gt;synthetic&lt;/strong&gt; tree/commits. Because these tree, although they contains new commits SHA, they do not contain any new content.&lt;/p&gt;
+
+&lt;p&gt;Now if we run &lt;code&gt;git branch&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+* master
+  redmine_plugin_01
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;We see that this branch exists. But where does it exists? To understand better this new tree, we need to take a look at the graphical &lt;code&gt;git&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this screenshot, we see that the new branch &lt;code&gt;redmine_plugin_01&lt;/code&gt;, is completely detached from the main project’s branch. I don’t know what they are called exactly, but I refer them as &lt;strong&gt;hanging&lt;/strong&gt;, or &lt;strong&gt;detached&lt;/strong&gt; branches, because they are not attached to the main history.&lt;/p&gt;
+
+&lt;p&gt;There are a few more options that we can apply when we do the split command. The &lt;code&gt;--annotate&lt;/code&gt; option will prepend a new string to every commit message in the new commits. Because these commits will essentially have the exact same commit message, but different in the SHA.&lt;/p&gt;
+
+&lt;p&gt;Now we can manipulate this new branch to get it ready to push to its new repository. Assume for the moment that this repository is completely empty.&lt;/p&gt;
+
+&lt;p&gt;The squash command comes with &lt;code&gt;subtree add merge pull push&lt;/code&gt;, but not with &lt;code&gt;split&lt;/code&gt;. We could do an interactive rebase on this new branch to squash all of the commit.&lt;/p&gt;
+
+&lt;p&gt;First checkout this new branch, &lt;code&gt;git checkout redmine_plugin_01&lt;/code&gt;, then do &lt;code&gt;git rebase -i --root&lt;/code&gt;. Rewrite your history like a regular interactive rebase.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;--rejoin&lt;/code&gt; command allow you to merge the new splitted branch immediately back into your main project. I have not figure out the reason why I would want to do that, but here is how.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+git subtree split --prefix=plugin/redmine_plugin_01 \
+--branch=redmine_plugin_01 --annotate=&#39;(plugin 01 split)&#39; \
+--rejoin master
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;updating-submodules-repository&quot;&gt;Updating submodules repository&lt;/h3&gt;
+
+&lt;p&gt;Now here is a common problem that I see people are having on StackOverflow. After making modifications to a subproject, you wish to push these new changes to the remote repository of the subproject. A lot of people are running to rejected push. To fix this problem, cleanly, you need to use the &lt;code&gt;split&lt;/code&gt; command with &lt;code&gt;--onto&lt;/code&gt; specified. And here is how.&lt;/p&gt;
+
+&lt;p&gt;If you have splitted commits with &lt;code&gt;subtree&lt;/code&gt; previously, then you must have a &lt;strong&gt;hanging&lt;/strong&gt; branch in your repository. This branch, like I have said it before, is the result of a &lt;code&gt;subtree split&lt;/code&gt;. In order to succesfully update the remote repository, you need to put the new commits on top of the &lt;strong&gt;hanging&lt;/strong&gt; branch. To do that, simply do&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+git subtree split --prefix=plugins/redmine_plugin_01 \
+--onto redmine_plugin_01 --branch redmine_plugin_01
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This essentially says, make a new synthetic history of my commits starting from where &lt;code&gt;--onto&lt;/code&gt; is specified, then, make a new branch called &lt;code&gt;redmine_plugin_01&lt;/code&gt;. This will add all the new commits on top of the previous &lt;code&gt;redmine_plugin_01&lt;/code&gt;. Then you can do a &lt;code&gt;git push&lt;/code&gt; to the submodule remote repository to update it.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+git push -f https://github.com/snwfog/redmine_plugin_01 \
+redmine_plugin_01:master
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This says to push my local branch &lt;code&gt;redmine_plugin_01&lt;/code&gt; to the specified remote, at the branch of &lt;code&gt;master&lt;/code&gt;. The &lt;code&gt;--force&lt;/code&gt; option make sure that the remote will accept the local history.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;I hope this will help with &lt;code&gt;git subtree&lt;/code&gt; workflow. For more information about &lt;code&gt;git subtree&lt;/code&gt;, I really suggest reading through the &lt;a href=&quot;https://github.com/git/git/blob/master/contrib/subtree/git-subtree.txt&quot;&gt;manual page&lt;/a&gt;. Personally, what I would like to learn more about is how to cleanly apply merges from an updated remote, bring it into the local repository, and then split new commits from there. Maybe I will investigate this issue in another blog.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 17 Aug 2013 17:41:00 -0400</pubDate>
+        <link>http://charlescy.com//git/git%20subtree/subtree/2013/08/17/git-subtree-tutorial.html</link>
+        <guid isPermaLink="true">http://charlescy.com//git/git%20subtree/subtree/2013/08/17/git-subtree-tutorial.html</guid>
+        
+        
+        <category>git</category>
+        
+        <category>git subtree</category>
+        
+        <category>subtree</category>
+        
+      </item>
+    
+      <item>
+        <title>RoR project at work</title>
+        <description>&lt;p&gt;Starting sometime next week, I will be starting a new project at 8D Technologies, where I am currently interning. I have completed my suppose to be 4 months project on the QA automation testing framework/toolkit in 2 months.&lt;/p&gt;
+
+&lt;p&gt;Today my team lead approached me, and offered me to work on a new project. This new project will be consisting of writing plugins (internal) for the Redmine platform (if you are doing software, then you should have heard of Redmine). I am &lt;strong&gt;very&lt;/strong&gt; excited. The reason is because I always wanted to work on a real Ruby projects, and I believe this opportunity will allow me to practice what I have learned and to improve my Ruby skills.&lt;/p&gt;
+
+&lt;p&gt;That said, I will still provide support for the test automation tool. These tasks consist of providing more internal API for compatibility with Selenium WebDriver, bug fixings, and &lt;em&gt;possibly&lt;/em&gt; write a Firefox plugin that would go hand-in-hand with the existing Selenium IDE, which would help QA teams to easier exporting their test cases and test suites from the IDE into WebDriver code.&lt;/p&gt;
+
+&lt;p&gt;Yay!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 25 Jun 2013 22:03:00 -0400</pubDate>
+        <link>http://charlescy.com//ruby/ror/rails/2013/06/25/ror-project-at-work.html</link>
+        <guid isPermaLink="true">http://charlescy.com//ruby/ror/rails/2013/06/25/ror-project-at-work.html</guid>
+        
+        
+        <category>ruby</category>
+        
+        <category>ror</category>
+        
+        <category>rails</category>
+        
+      </item>
+    
+  </channel>
+</rss>

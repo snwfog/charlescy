@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Guide on installing powerline for vim</title>
+  <meta name="description" content="I decide to do some clean up for my vim profile since I’ve been using it extensively at work at the moment. I found powerline, an eye-candy status bar for vi...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://charlescy.com//2013/06/01/guide-on-installing-powerline-for-vim.html">
+  <link rel="alternate" type="application/rss+xml" title="O hai der!" href="http://charlescy.com//feed.xml" />
+</head>
+
+  <body>
+    <header class="site-header">
+    <div class="wrapper">
+        <a class="site-title" href="//">O hai der! - imho</a>
+    </div>
+</header>
+
+    <div class="container">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Guide on installing powerline for vim</h1>
+    <p class="post-meta">Jun 1, 2013</p>
+  </header>
+  <article class="post-content">
+    <p>I decide to do some clean up for my vim profile since I’ve been using it extensively at work at the moment. I found <a href="https://github.com/Lokaltog/powerline">powerline</a>, an eye-candy status bar for vim, and MacVim. A lot of people runs into error while trying to install powerline, including myself. So here is a step by step guide of how I install powerline for myself. Keep in mind however that I take a lot of assumption that you are already familiar with working with the terminal on an unix machine. I am using Lion 10.8.3.</p>
+
+<p>First, install python from <code>brew</code></p>
+
+<pre><code>$ brew install python
+</code></pre>
+
+<p>Easy enough. Make sure that now your system is using the appropriate python by doing a <code>which python</code> or <code>python --version</code>. It should be located in the <code>/usr/local/bin</code> directory which is where homebrew install the binary.</p>
+
+<p>In case this fails, look through the homebrew installation output and if you find that homebrew is refusing to sym link python, it is probably because that it cannot write to <code>/usr/local</code>. So following <a href="http://stackoverflow.com/questions/13088998/homebrew-python-installing">this</a> post on stackoverflow, yu should issue the following command to take over your <code>/usr/local</code> directory.</p>
+
+<pre><code>$ sudo chown -R `whoami` /usr/local
+$ brew link --overwrite python
+</code></pre>
+
+<p>After installing python, I suggest also a fresh installation of vim from homebrew as well.</p>
+
+<pre><code>$ brew install vim --env-std --override-system-vim --enable-pythoninterp;
+</code></pre>
+
+<p>Install <a href="https://github.com/carlhuda/janus">janus</a> the vim distribution. Janus will make a back up of your current vim setup, but I suggest you to back it up yourself as well just in case.</p>
+
+<pre><code>$ curl -Lo- https://bit.ly/janus-bootstrap | bash
+</code></pre>
+
+<p>Create a <code>.janus</code> directory at your user root, and clone a copy of powerline inside of it.</p>
+
+<pre><code>$ mkdir ~/.janus
+$ hub clone Lokaltog/powerline ~/.janus/powerline
+</code></pre>
+
+<p>Janus create two new file for your vim configuration, a <code>.vimrc.before</code> and a <code>.vimrc.after</code>. <code>.vimrc.before</code> is use for Janus setup, and <code>.vimrc.after</code> will contains your personal preferences.</p>
+
+<pre><code>$ echo 'set rtp+=~/.janus/powerline/powerline/bindings/vim` &gt;&gt; ~/.vimrc.before
+$ echo 'set guifont=Inconsolata-dz\ for\ Powerline:h12'
+</code></pre>
+
+<p>Now last but not the least, the second command set the font that vim should use. As you can see, if you were to launch vim right now, you would see powerline status bar but with [x]’s because the glyphs are not showing properly. So we need to install powerline compatible fonts.</p>
+
+<pre><code>$ hub clone Lokaltog/powerline-fonts ~/src/monofonts
+</code></pre>
+
+<p>Once the directory is clone, install the font with Font Book.</p>
+
+<p>Now you should have an awesome looking vim status bar.</p>
+
+
+  </article>
+</div>
+
+    </div>
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/snwfog">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">snwfog</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
